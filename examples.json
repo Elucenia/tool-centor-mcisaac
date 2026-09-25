@@ -1,0 +1,84 @@
+[
+  {
+    "label": "Adulto de 50 anos com febre, com tosse: 0 ponto",
+    "input": {
+      "febre": true,
+      "idade": "-1"
+    },
+    "expected": {
+      "score": 0,
+      "level": "low",
+      "verdict": "1 a 2,5%"
+    },
+    "originalInput": {
+      "febre": true,
+      "idade": "-1"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Adulto de 30 anos, febre e sem tosse: 2 pontos",
+    "input": {
+      "febre": true,
+      "tosse": true,
+      "idade": "0"
+    },
+    "expected": {
+      "score": 2,
+      "level": "mid",
+      "verdict": "11 a 17%"
+    },
+    "originalInput": {
+      "febre": true,
+      "tosse": true,
+      "idade": "0"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Criança de 8 anos com os 4 achados: 5 pontos",
+    "input": {
+      "febre": true,
+      "tosse": true,
+      "linfo": true,
+      "amig": true,
+      "idade": "1"
+    },
+    "expected": {
+      "score": 5,
+      "level": "high",
+      "verdict": "51 a 53%"
+    },
+    "originalInput": {
+      "febre": true,
+      "tosse": true,
+      "linfo": true,
+      "amig": true,
+      "idade": "1"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Adulto de 60 anos com os 4 achados: 3 pontos",
+    "input": {
+      "febre": true,
+      "tosse": true,
+      "linfo": true,
+      "amig": true,
+      "idade": "-1"
+    },
+    "expected": {
+      "score": 3,
+      "level": "mid",
+      "verdict": "28 a 35%"
+    },
+    "originalInput": {
+      "febre": true,
+      "tosse": true,
+      "linfo": true,
+      "amig": true,
+      "idade": "-1"
+    },
+    "expandedZeroOptions": []
+  }
+]
