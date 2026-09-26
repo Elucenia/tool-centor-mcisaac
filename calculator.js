@@ -1,9 +1,11 @@
-/* ELUCENIA standalone integration. Source package metadata and rights: README.md. */
+/* tool-centor-mcisaac · Elucenia · https://github.com/Elucenia/tool-centor-mcisaac
+   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+   Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"centor-mcisaac","title":"Escore de Centor modificado (McIsaac)","fields":[["febre","Temperatura &gt; 38 °C","chk",{"pts":1}],["tosse","Ausência de tosse","chk",{"pts":1}],["linfo","Linfonodos cervicais anteriores aumentados e dolorosos","chk",{"pts":1}],["amig","Edema ou exsudato amigdaliano","chk",{"pts":1}],["idade","Idade","radio",{"opts":{"0":"15 a 44 anos","1":"3 a 14 anos","-1":"≥ 45 anos"}}]],"config":{"unit":"","label":"Centor/McIsaac","fields":[["febre","chk",1],["tosse","chk",1],["linfo","chk",1],["amig","chk",1],["idade","radio",0]],"bands":[[-1,"low","Probabilidade de estreptococo de 1 a 2,5%","Sem teste e sem antibiótico."],[1,"low","Probabilidade de estreptococo de 5 a 10%","Sem teste e sem antibiótico."],[2,"mid","Probabilidade de estreptococo de 11 a 17%","Teste rápido ou cultura; antibiótico só se positivo."],[3,"mid","Probabilidade de estreptococo de 28 a 35%","Teste rápido ou cultura; antibiótico só se positivo."],[4,"high","Probabilidade de estreptococo de 51 a 53%","Testar e tratar se positivo; na falta de teste, considerar antibiótico empírico."]]},"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};
