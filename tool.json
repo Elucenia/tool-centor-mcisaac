@@ -5,6 +5,7 @@
     "short": "Probabilidade de faringite estreptocócica",
     "desc": "Calcule o escore de Centor modificado por McIsaac: probabilidade de faringoamigdalite por estreptococo do grupo A e conduta com teste rápido ou cultura.",
     "lead": "Estima a probabilidade de faringoamigdalite pelo estreptococo β-hemolítico do grupo A em crianças a partir de 3 anos e adultos, e orienta quem testar.",
+    "kind": "Escore",
     "spec": [
       "infectologia",
       "medicina-de-familia-e-comunidade",
@@ -12,39 +13,30 @@
       "pediatria",
       "medicina-de-emergencia"
     ],
-    "tier": 1,
     "fields": [
       [
         "febre",
         "Temperatura &gt; 38 °C",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "tosse",
         "Ausência de tosse",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "linfo",
         "Linfonodos cervicais anteriores aumentados e dolorosos",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "amig",
         "Edema ou exsudato amigdaliano",
         "chk",
-        {
-          "pts": 1
-        }
+        {}
       ],
       [
         "idade",
@@ -59,82 +51,7 @@
         }
       ]
     ],
-    "score": {
-      "label": "Centor/McIsaac",
-      "unit": "",
-      "bands": [
-        [
-          -1,
-          "low",
-          "Probabilidade de estreptococo de 1 a 2,5%",
-          "Sem teste e sem antibiótico."
-        ],
-        [
-          1,
-          "low",
-          "Probabilidade de estreptococo de 5 a 10%",
-          "Sem teste e sem antibiótico."
-        ],
-        [
-          2,
-          "mid",
-          "Probabilidade de estreptococo de 11 a 17%",
-          "Teste rápido ou cultura; antibiótico só se positivo."
-        ],
-        [
-          3,
-          "mid",
-          "Probabilidade de estreptococo de 28 a 35%",
-          "Teste rápido ou cultura; antibiótico só se positivo."
-        ],
-        [
-          4,
-          "high",
-          "Probabilidade de estreptococo de 51 a 53%",
-          "Testar e tratar se positivo; na falta de teste, considerar antibiótico empírico."
-        ]
-      ]
-    },
-    "formula": "<p>1 ponto para cada: febre &gt; 38 °C, ausência de tosse, adenomegalia cervical anterior dolorosa, edema ou exsudato amigdaliano. Idade: +1 (3 a 14 anos), 0 (15 a 44 anos), −1 (≥ 45 anos). Total de −1 a 5.</p>",
-    "table": [
-      [
-        "Pontos",
-        "Probabilidade de estreptococo do grupo A",
-        "Conduta (McIsaac 1998)"
-      ],
-      [
-        "≤ 0",
-        "1 a 2,5%",
-        "Sem teste, sem antibiótico"
-      ],
-      [
-        "1",
-        "5 a 10%",
-        "Sem teste, sem antibiótico"
-      ],
-      [
-        "2",
-        "11 a 17%",
-        "Cultura ou teste rápido; tratar se positivo"
-      ],
-      [
-        "3",
-        "28 a 35%",
-        "Cultura ou teste rápido; tratar se positivo"
-      ],
-      [
-        "≥ 4",
-        "51 a 53%",
-        "Cultura ou teste rápido e tratar"
-      ]
-    ],
-    "tips": [
-      "Mesmo com 4 ou 5 pontos, a probabilidade é cerca de 50%: a IDSA recomenda confirmar com teste rápido ou cultura antes do antibiótico.",
-      "Sinais virais (tosse, coriza, rouquidão, conjuntivite, úlceras orais) falam contra estreptococo e dispensam o teste.",
-      "Em crianças, teste rápido negativo deve ser confirmado por cultura; em adultos, não é necessário.",
-      "Não use em menores de 3 anos: a faringite estreptocócica e a febre reumática são raras nessa idade.",
-      "Tratamento de escolha, quando indicado: penicilina benzatina dose única ou amoxicilina por 10 dias."
-    ],
+    "formula": "<p>Soma preliminar: 1 ponto para cada um dos quatro achados — febre &gt; 38 °C, ausência de tosse, adenomegalia cervical anterior dolorosa, edema ou exsudato amigdaliano —, mais 1 ponto entre 3 e 14 anos, 0 entre 15 e 44 anos e −1 a partir de 45 anos. A soma preliminar varia de −1 a 5. Pontuação final: resultados preliminares abaixo de 0 são definidos como 0 e acima de 4 como 4, conforme McIsaac 1998 e Fine 2012. A soma preliminar é registrada separadamente; probabilidades e condutas não foram aprovadas clinicamente.</p>",
     "sources": [
       [
         "McIsaac WJ et al. A clinical score to reduce unnecessary antibiotic use in patients with sore throat. CMAJ, 1998.",
@@ -176,7 +93,7 @@
         }
       ],
       [
-        "Criança de 8 anos com os 4 achados: 5 pontos",
+        "Criança de 8 anos com os 4 achados: pontuação final 4 (soma preliminar 5)",
         {
           "febre": true,
           "tosse": true,
@@ -185,7 +102,7 @@
           "idade": "1"
         },
         {
-          "score": 5,
+          "score": 4,
           "level": "high",
           "verdict": "51 a 53%"
         }
@@ -206,71 +123,6 @@
         }
       ]
     ],
-    "kind": "Escore",
-    "config": {
-      "unit": "",
-      "label": "Centor/McIsaac",
-      "fields": [
-        [
-          "febre",
-          "chk",
-          1
-        ],
-        [
-          "tosse",
-          "chk",
-          1
-        ],
-        [
-          "linfo",
-          "chk",
-          1
-        ],
-        [
-          "amig",
-          "chk",
-          1
-        ],
-        [
-          "idade",
-          "radio",
-          0
-        ]
-      ],
-      "bands": [
-        [
-          -1,
-          "low",
-          "Probabilidade de estreptococo de 1 a 2,5%",
-          "Sem teste e sem antibiótico."
-        ],
-        [
-          1,
-          "low",
-          "Probabilidade de estreptococo de 5 a 10%",
-          "Sem teste e sem antibiótico."
-        ],
-        [
-          2,
-          "mid",
-          "Probabilidade de estreptococo de 11 a 17%",
-          "Teste rápido ou cultura; antibiótico só se positivo."
-        ],
-        [
-          3,
-          "mid",
-          "Probabilidade de estreptococo de 28 a 35%",
-          "Teste rápido ou cultura; antibiótico só se positivo."
-        ],
-        [
-          4,
-          "high",
-          "Probabilidade de estreptococo de 51 a 53%",
-          "Testar e tratar se positivo; na falta de teste, considerar antibiótico empírico."
-        ]
-      ]
-    },
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -279,17 +131,612 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T19:34:06.809Z",
+      "total": 48,
+      "passed": 48,
+      "sourceRowCount": 48,
+      "uniqueApiInputCount": 48,
+      "sourceContextCount": 48,
+      "embeddedCasesAreSubset": true,
+      "embeddedCaseCount": 4,
+      "caseStorage": {
+        "mode": "complete-downloadable-bank-with-inline-subset",
+        "file": "independent-source-cases.json",
+        "sha256": "fd18dd72563dd9244768354001888408a703a6c1f9f52afcf20d4991b3007f36",
+        "total": 48,
+        "bankRowCount": 48,
+        "uniqueApiInputCount": 48,
+        "sourceContextCount": 48,
+        "expectedEvidence": [
+          {
+            "file": "reports/review-20261003/mcisaac-publication-own-expectations-final27.json",
+            "sha256": "cbc212799ce6dc72bc6ea8c11155c6121748593da0f8c990dc0c95d1b095092f"
+          },
+          {
+            "file": "reports/review-20261003/mcisaac-publication-primary-read-scope-final27.json",
+            "sha256": "f415d0ac0ab780e596103da1e72a6a8e92769e5cff4661523f386d8ce9d8db8e"
+          }
+        ],
+        "obtainedEvidence": {
+          "file": "reports/review-20261003/mcisaac-publication-independent-peer-final27.json",
+          "sha256": "655e3015c7cb82fe47bd57adf3fb7ada27f934b197107f2630c796773f1c61c6"
+        },
+        "packagingRequirement": "Compose separately owned source/rubric/edition changes and fresh build/package/browser bindings before publication."
+      },
+      "inputIdentity": {
+        "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+        "sourceRows": 48,
+        "uniqueApiInputs": 48,
+        "duplicateRows": 0,
+        "expectationAudit": {
+          "file": "reports/review-20261003/mcisaac-publication-own-expectations-final27.json",
+          "sha256": "cbc212799ce6dc72bc6ea8c11155c6121748593da0f8c990dc0c95d1b095092f"
+        }
+      },
+      "scope": "Four previously selected binary findings plus age-point code−1/0/1: exact source-normalized final0–4 and separately preliminary−1..5; no clinical categorical output projected.",
+      "sources": [
+        {
+          "edition": "McIsaac1998 / Fine2012 explicitly normalized final0–4",
+          "sources": [
+            {
+              "url": "https://jhanley.biostat.mcgill.ca/c681/applications/sore_throat_1.pdf",
+              "edition": "McIsaac et al., CMAJ 1998;158:75–83",
+              "access": "Direct original PDF text reopened, scoring derivation p78–79 and diagram printed79 read; local original page image visually read in earlier turn.",
+              "readScope": "Four equal one-point findings; age3–14:+1,15–44:0,45+:−1; negative total assigned0 and maximum4. Abstract population3–76 inspected. No full-article or clinical management approval.",
+              "localImage": {
+                "file": "eight-diagnostic-primary-final26/mcisaac1998-p5.png",
+                "sha256": "33611fca8e309afc0312d636318610bfefeb184ea5ad42e7ef714ccb6c09955b"
+              }
+            },
+            {
+              "url": "https://stacks.cdc.gov/view/cdc/33542/cdc_33542_DS1.pdf",
+              "edition": "Fine et al., Arch Intern Med 2012;172:847–852, DOI10.1001/archinternmed.2012.950 author manuscript",
+              "access": "Direct CDC primary PDF text reopened; Statistical Analysis, PDFp3, manuscript lines107–112 personally read.",
+              "readScope": "Four component weights and age adjustment; −1 and5 explicitly normalized0 and4. PDF visual screenshot attempt failed earlier; no visual-table or full-article reading claimed."
+            }
+          ],
+          "readScope": "Own direct scoring paragraph/diagram and Fine Statistical Analysis read; original source selected weights and final normalization only."
+        }
+      ],
+      "evidencePath": "reports/review-20261003/mcisaac-publication-independent-peer-final27.json",
+      "evidenceSha256": "655e3015c7cb82fe47bd57adf3fb7ada27f934b197107f2630c796773f1c61c6",
+      "independentPeer": {
+        "status": "passed-scoped-numeric",
+        "evidence": {
+          "file": "reports/review-20261003/mcisaac-publication-independent-peer-final27.json",
+          "sha256": "655e3015c7cb82fe47bd57adf3fb7ada27f934b197107f2630c796773f1c61c6"
+        },
+        "scope": "Independently source-enumerated48 inputs before calculator imports; three adapter+legacy Node/VM/actualChromium and other216 methods unchanged, no whole clinical instrument approval."
+      },
+      "freshAdapterExecutions": 144,
+      "freshVmExecutions": 144,
+      "actualBrowserEvidenceScope": "Actual Chromium48×3 standalone adapters plus48 legacy observed in the independent peer. This bank projects only the three adapters; it does not attribute legacy or VM calls as browser UI journeys.",
+      "implementations": [
+        {
+          "file": "apps/website/private/tool-code/centor-mcisaac/calculator.js",
+          "app": "website",
+          "previousSha256": "838a5d17e2d0e7102608a4b63b164a6a666fa9a800d4e2dedd2d3c2cedf7cfae",
+          "sha256": "5ebdcddfc2bb2cfc60dbc3ff8d25aeea587b964273fd0ab83c7e04a442a07481",
+          "stageFile": "reports/review-20261003/mcisaac-source-final-clamp-stage-final27/apps/website/private/tool-code/centor-mcisaac/calculator.js",
+          "applied": false
+        },
+        {
+          "file": "apps/dashboard/private/tool-code/centor-mcisaac/calculator.js",
+          "app": "dashboard",
+          "previousSha256": "838a5d17e2d0e7102608a4b63b164a6a666fa9a800d4e2dedd2d3c2cedf7cfae",
+          "sha256": "5ebdcddfc2bb2cfc60dbc3ff8d25aeea587b964273fd0ab83c7e04a442a07481",
+          "stageFile": "reports/review-20261003/mcisaac-source-final-clamp-stage-final27/apps/dashboard/private/tool-code/centor-mcisaac/calculator.js",
+          "applied": false
+        },
+        {
+          "file": "apps/command-center/private/tool-code/centor-mcisaac/calculator.js",
+          "app": "command-center",
+          "previousSha256": "838a5d17e2d0e7102608a4b63b164a6a666fa9a800d4e2dedd2d3c2cedf7cfae",
+          "sha256": "5ebdcddfc2bb2cfc60dbc3ff8d25aeea587b964273fd0ab83c7e04a442a07481",
+          "stageFile": "reports/review-20261003/mcisaac-source-final-clamp-stage-final27/apps/command-center/private/tool-code/centor-mcisaac/calculator.js",
+          "applied": false
+        }
+      ],
+      "qualifications": [
+        "Input booleans represent findings selected by the user; this oracle does not assess whether a patient has those findings.",
+        "1998 diagram says tonsillar swelling or exudate and tender anterior cervical adenopathy; Fine2012 Methods describes tonsillar exudates and swollen anterior cervical nodes. Selected-point arithmetic/normalization does not prove complete clinical-rubric equivalence across those editions.",
+        "The integer age code is already selected; actual chronological-age cutoff mapping is outside this oracle. Probabilities, private categories, testing and treatment are excluded.",
+        "This is not an official instrument translation, professional language certification, clinical validation or rights approval.",
+        "Only raw.score source-final normalization and separately raw.preliminaryScore selected-point arithmetic are included. Clinical categories, main text, private level/verdict/note/rows, prognosis, diagnosis, management and unmeasured feature classification are excluded.",
+        "All source scenarios in this bank and the original donor reports remain retained. Mirror/runtime calculations do not multiply scenario counts. Inline four examples are a subset of the complete downloadable bank.",
+        "Source fields, rubric/edition labels, clinical scope notes and localization changes have separate ownership and must be composed without replacing whole catalogs. All862 historic fixtures/tolerances and approval flags remain unchanged.",
+        "Fresh source/build/packages and browser journey bindings are required before publication. No already-served website or final package proof is claimed by this preparation."
+      ],
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed",
+      "metadataPackagingPeer": {
+        "status": "passed",
+        "scope": "Bounded independent review of the original source bank and its metadata/helper. Prospective code rebinding is separately re-executed below and requires the final composition peer; no human approval inferred.",
+        "peer": {
+          "file": "reports/review-20261003/mcisaac-final-bank-metadata-independent-review-western-final27.json",
+          "sha256": "8f5efcb14066ca516311d218a06b19a606ad47ce7b78df28741b14900981e89e"
+        },
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed"
+      },
+      "prospectiveSource27Bindings": [
+        {
+          "file": "apps/website/private/tool-code/centor-mcisaac/calculator.js",
+          "sha256": "5ebdcddfc2bb2cfc60dbc3ff8d25aeea587b964273fd0ab83c7e04a442a07481"
+        },
+        {
+          "file": "apps/dashboard/private/tool-code/centor-mcisaac/calculator.js",
+          "sha256": "5ebdcddfc2bb2cfc60dbc3ff8d25aeea587b964273fd0ab83c7e04a442a07481"
+        },
+        {
+          "file": "apps/command-center/private/tool-code/centor-mcisaac/calculator.js",
+          "sha256": "5ebdcddfc2bb2cfc60dbc3ff8d25aeea587b964273fd0ab83c7e04a442a07481"
+        }
+      ],
+      "prospectiveSource27Replay": {
+        "file": "reports/review-20261003/source27-complete-bank-current-replay-root-r3.json",
+        "sha256": "44c601f27d3d5051a8d55a581381112b58df36c7c4b6cfd24ce1249b263d6a2b"
+      },
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "McIsaac 1998 / Fine 2012: quatro achados de 1 ponto e ajuste etário; soma preliminar −1 a 5, pontuação final limitada a 0 a 4",
+    "implementationVersion": "centor-mcisaac@native-2026-10-04+5ebdcddfc2bb",
+    "currentMethodSource": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1228750/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Soma preliminar: 1 ponto para cada um dos quatro achados — febre > 38 °C, ausência de tosse, adenomegalia cervical anterior dolorosa, edema ou exsudato amigdaliano —, mais 1 ponto entre 3 e 14 anos, 0 entre 15 e 44 anos e −1 a partir de 45 anos. A soma preliminar varia de −1 a 5. Pontuação final: resultados preliminares abaixo de 0 são definidos como 0 e acima de 4 como 4, conforme McIsaac 1998 e Fine 2012. A soma preliminar é registrada separadamente; probabilidades e condutas não foram aprovadas clinicamente.",
+      "inputContract": {
+        "fields": [
+          [
+            "febre",
+            "Temperatura &gt; 38 °C",
+            "chk",
+            {}
+          ],
+          [
+            "tosse",
+            "Ausência de tosse",
+            "chk",
+            {}
+          ],
+          [
+            "linfo",
+            "Linfonodos cervicais anteriores aumentados e dolorosos",
+            "chk",
+            {}
+          ],
+          [
+            "amig",
+            "Edema ou exsudato amigdaliano",
+            "chk",
+            {}
+          ],
+          [
+            "idade",
+            "Idade",
+            "radio",
+            {
+              "opts": {
+                "0": "15 a 44 anos",
+                "1": "3 a 14 anos",
+                "-1": "≥ 45 anos"
+              }
+            }
+          ]
+        ],
+        "hash": "59a114ba4a23f241b050bbabce62bf011cf6db081a23f977ced8ce6220b02cb3"
+      },
+      "sourceEditions": [
+        {
+          "citation": "McIsaac WJ et al. A clinical score to reduce unnecessary antibiotic use in patients with sore throat. CMAJ, 1998.",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/9475915/",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "A clinical score to reduce unnecessary antibiotic use in patients with sore throat.",
+            "year": "1998",
+            "firstPublicationDate": "1998-01-01",
+            "pmid": "9475915",
+            "pmcid": "PMC1228750",
+            "journal": "CMAJ : Canadian Medical Association journal = journal de l'Association medicale canadienne",
+            "authors": "McIsaac WJ, White D, Tannenbaum D, Low DE."
+          },
+          "primaryPublicationUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1228750/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "fd17f6ab3b4a081f2aabb8e87a8079c41e45bdfe665ace4f8b1805b463c2cdb4",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Centor RM et al. The diagnosis of strep throat in adults in the emergency room. Med Decis Making, 1981.",
+          "url": "https://doi.org/10.1177/0272989X8100100304",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "The diagnosis of strep throat in adults in the emergency room.",
+            "year": "1981",
+            "firstPublicationDate": "1981-01-01",
+            "doi": "10.1177/0272989x8100100304",
+            "pmid": "6763125",
+            "journal": "Medical decision making : an international journal of the Society for Medical Decision Making",
+            "authors": "Centor RM, Witherspoon JM, Dalton HP, Brody CE, Link K."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/6763125/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "2a4e2e7eef4b69e94f137f228b66c1d15b99c1f0eeadfa62d0f60850c0bb68b2",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Shulman ST et al. Clinical practice guideline for the diagnosis and management of group A streptococcal pharyngitis: 2012 update by the Infectious Diseases Society of America. Clin Infect Dis, 2012.",
+          "url": "https://doi.org/10.1093/cid/cis629",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Clinical practice guideline for the diagnosis and management of group A streptococcal pharyngitis: 2012 update by the Infectious Diseases Society of America.",
+            "year": "2012",
+            "firstPublicationDate": "2012-09-09",
+            "doi": "10.1093/cid/cis629",
+            "pmid": "22965026",
+            "pmcid": "PMC7108032",
+            "journal": "Clinical infectious diseases : an official publication of the Infectious Diseases Society of America",
+            "authors": "Shulman ST, Bisno AL, Clegg HW, Gerber MA, Kaplan EL, Lee G, Martin JM, Van Beneden C, Infectious Diseases Society of America."
+          },
+          "primaryPublicationUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7108032/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "c1282fc07496b07f5ddc1f7be7ba9e589ed12e10a58c5047a56cc718e632bfc5",
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T19:34:06.809Z",
+        "total": 48,
+        "passed": 48,
+        "sourceRowCount": 48,
+        "uniqueApiInputCount": 48,
+        "sourceContextCount": 48,
+        "embeddedCasesAreSubset": true,
+        "embeddedCaseCount": 4,
+        "caseStorage": {
+          "mode": "complete-downloadable-bank-with-inline-subset",
+          "file": "independent-source-cases.json",
+          "sha256": "fd18dd72563dd9244768354001888408a703a6c1f9f52afcf20d4991b3007f36",
+          "total": 48,
+          "bankRowCount": 48,
+          "uniqueApiInputCount": 48,
+          "sourceContextCount": 48,
+          "expectedEvidence": [
+            {
+              "file": "reports/review-20261003/mcisaac-publication-own-expectations-final27.json",
+              "sha256": "cbc212799ce6dc72bc6ea8c11155c6121748593da0f8c990dc0c95d1b095092f"
+            },
+            {
+              "file": "reports/review-20261003/mcisaac-publication-primary-read-scope-final27.json",
+              "sha256": "f415d0ac0ab780e596103da1e72a6a8e92769e5cff4661523f386d8ce9d8db8e"
+            }
+          ],
+          "obtainedEvidence": {
+            "file": "reports/review-20261003/mcisaac-publication-independent-peer-final27.json",
+            "sha256": "655e3015c7cb82fe47bd57adf3fb7ada27f934b197107f2630c796773f1c61c6"
+          },
+          "packagingRequirement": "Compose separately owned source/rubric/edition changes and fresh build/package/browser bindings before publication."
+        },
+        "inputIdentity": {
+          "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+          "sourceRows": 48,
+          "uniqueApiInputs": 48,
+          "duplicateRows": 0,
+          "expectationAudit": {
+            "file": "reports/review-20261003/mcisaac-publication-own-expectations-final27.json",
+            "sha256": "cbc212799ce6dc72bc6ea8c11155c6121748593da0f8c990dc0c95d1b095092f"
+          }
+        },
+        "scope": "Four previously selected binary findings plus age-point code−1/0/1: exact source-normalized final0–4 and separately preliminary−1..5; no clinical categorical output projected.",
+        "sources": [
+          {
+            "edition": "McIsaac1998 / Fine2012 explicitly normalized final0–4",
+            "sources": [
+              {
+                "url": "https://jhanley.biostat.mcgill.ca/c681/applications/sore_throat_1.pdf",
+                "edition": "McIsaac et al., CMAJ 1998;158:75–83",
+                "access": "Direct original PDF text reopened, scoring derivation p78–79 and diagram printed79 read; local original page image visually read in earlier turn.",
+                "readScope": "Four equal one-point findings; age3–14:+1,15–44:0,45+:−1; negative total assigned0 and maximum4. Abstract population3–76 inspected. No full-article or clinical management approval.",
+                "localImage": {
+                  "file": "eight-diagnostic-primary-final26/mcisaac1998-p5.png",
+                  "sha256": "33611fca8e309afc0312d636318610bfefeb184ea5ad42e7ef714ccb6c09955b"
+                }
+              },
+              {
+                "url": "https://stacks.cdc.gov/view/cdc/33542/cdc_33542_DS1.pdf",
+                "edition": "Fine et al., Arch Intern Med 2012;172:847–852, DOI10.1001/archinternmed.2012.950 author manuscript",
+                "access": "Direct CDC primary PDF text reopened; Statistical Analysis, PDFp3, manuscript lines107–112 personally read.",
+                "readScope": "Four component weights and age adjustment; −1 and5 explicitly normalized0 and4. PDF visual screenshot attempt failed earlier; no visual-table or full-article reading claimed."
+              }
+            ],
+            "readScope": "Own direct scoring paragraph/diagram and Fine Statistical Analysis read; original source selected weights and final normalization only."
+          }
+        ],
+        "evidencePath": "reports/review-20261003/mcisaac-publication-independent-peer-final27.json",
+        "evidenceSha256": "655e3015c7cb82fe47bd57adf3fb7ada27f934b197107f2630c796773f1c61c6",
+        "independentPeer": {
+          "status": "passed-scoped-numeric",
+          "evidence": {
+            "file": "reports/review-20261003/mcisaac-publication-independent-peer-final27.json",
+            "sha256": "655e3015c7cb82fe47bd57adf3fb7ada27f934b197107f2630c796773f1c61c6"
+          },
+          "scope": "Independently source-enumerated48 inputs before calculator imports; three adapter+legacy Node/VM/actualChromium and other216 methods unchanged, no whole clinical instrument approval."
+        },
+        "freshAdapterExecutions": 144,
+        "freshVmExecutions": 144,
+        "actualBrowserEvidenceScope": "Actual Chromium48×3 standalone adapters plus48 legacy observed in the independent peer. This bank projects only the three adapters; it does not attribute legacy or VM calls as browser UI journeys.",
+        "implementations": [
+          {
+            "file": "apps/website/private/tool-code/centor-mcisaac/calculator.js",
+            "app": "website",
+            "previousSha256": "838a5d17e2d0e7102608a4b63b164a6a666fa9a800d4e2dedd2d3c2cedf7cfae",
+            "sha256": "5ebdcddfc2bb2cfc60dbc3ff8d25aeea587b964273fd0ab83c7e04a442a07481",
+            "stageFile": "reports/review-20261003/mcisaac-source-final-clamp-stage-final27/apps/website/private/tool-code/centor-mcisaac/calculator.js",
+            "applied": false
+          },
+          {
+            "file": "apps/dashboard/private/tool-code/centor-mcisaac/calculator.js",
+            "app": "dashboard",
+            "previousSha256": "838a5d17e2d0e7102608a4b63b164a6a666fa9a800d4e2dedd2d3c2cedf7cfae",
+            "sha256": "5ebdcddfc2bb2cfc60dbc3ff8d25aeea587b964273fd0ab83c7e04a442a07481",
+            "stageFile": "reports/review-20261003/mcisaac-source-final-clamp-stage-final27/apps/dashboard/private/tool-code/centor-mcisaac/calculator.js",
+            "applied": false
+          },
+          {
+            "file": "apps/command-center/private/tool-code/centor-mcisaac/calculator.js",
+            "app": "command-center",
+            "previousSha256": "838a5d17e2d0e7102608a4b63b164a6a666fa9a800d4e2dedd2d3c2cedf7cfae",
+            "sha256": "5ebdcddfc2bb2cfc60dbc3ff8d25aeea587b964273fd0ab83c7e04a442a07481",
+            "stageFile": "reports/review-20261003/mcisaac-source-final-clamp-stage-final27/apps/command-center/private/tool-code/centor-mcisaac/calculator.js",
+            "applied": false
+          }
+        ],
+        "qualifications": [
+          "Input booleans represent findings selected by the user; this oracle does not assess whether a patient has those findings.",
+          "1998 diagram says tonsillar swelling or exudate and tender anterior cervical adenopathy; Fine2012 Methods describes tonsillar exudates and swollen anterior cervical nodes. Selected-point arithmetic/normalization does not prove complete clinical-rubric equivalence across those editions.",
+          "The integer age code is already selected; actual chronological-age cutoff mapping is outside this oracle. Probabilities, private categories, testing and treatment are excluded.",
+          "This is not an official instrument translation, professional language certification, clinical validation or rights approval.",
+          "Only raw.score source-final normalization and separately raw.preliminaryScore selected-point arithmetic are included. Clinical categories, main text, private level/verdict/note/rows, prognosis, diagnosis, management and unmeasured feature classification are excluded.",
+          "All source scenarios in this bank and the original donor reports remain retained. Mirror/runtime calculations do not multiply scenario counts. Inline four examples are a subset of the complete downloadable bank.",
+          "Source fields, rubric/edition labels, clinical scope notes and localization changes have separate ownership and must be composed without replacing whole catalogs. All862 historic fixtures/tolerances and approval flags remain unchanged.",
+          "Fresh source/build/packages and browser journey bindings are required before publication. No already-served website or final package proof is claimed by this preparation."
+        ],
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed",
+        "metadataPackagingPeer": {
+          "status": "passed",
+          "scope": "Bounded independent review of the original source bank and its metadata/helper. Prospective code rebinding is separately re-executed below and requires the final composition peer; no human approval inferred.",
+          "peer": {
+            "file": "reports/review-20261003/mcisaac-final-bank-metadata-independent-review-western-final27.json",
+            "sha256": "8f5efcb14066ca516311d218a06b19a606ad47ce7b78df28741b14900981e89e"
+          },
+          "clinicalApproval": "not-performed",
+          "professionalLanguageApproval": "not-performed",
+          "sourceRightsApproval": "not-performed",
+          "fullMethodConformance": "not-performed"
+        },
+        "prospectiveSource27Bindings": [
+          {
+            "file": "apps/website/private/tool-code/centor-mcisaac/calculator.js",
+            "sha256": "5ebdcddfc2bb2cfc60dbc3ff8d25aeea587b964273fd0ab83c7e04a442a07481"
+          },
+          {
+            "file": "apps/dashboard/private/tool-code/centor-mcisaac/calculator.js",
+            "sha256": "5ebdcddfc2bb2cfc60dbc3ff8d25aeea587b964273fd0ab83c7e04a442a07481"
+          },
+          {
+            "file": "apps/command-center/private/tool-code/centor-mcisaac/calculator.js",
+            "sha256": "5ebdcddfc2bb2cfc60dbc3ff8d25aeea587b964273fd0ab83c7e04a442a07481"
+          }
+        ],
+        "prospectiveSource27Replay": {
+          "file": "reports/review-20261003/source27-complete-bank-current-replay-root-r3.json",
+          "sha256": "44c601f27d3d5051a8d55a581381112b58df36c7c4b6cfd24ce1249b263d6a2b"
+        },
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "5ebdcddfc2bb2cfc60dbc3ff8d25aeea587b964273fd0ab83c7e04a442a07481",
+      "mcisaacNormalizationSourceAmendment": {
+        "at": "2026-10-04T19:31:48.038Z",
+        "scope": "Source-edition final-score normalization only: preliminary sum −1..5 is recorded separately; final score is0..4 in1998 and2012. Four findings/age weights unchanged. Display formula, edition, appended limits and one historical caption/expected numeric score are explicitly amended. No clinical/probability/treatment certification.",
+        "sources": [
+          {
+            "url": "https://jhanley.biostat.mcgill.ca/c681/applications/sore_throat_1.pdf",
+            "edition": "McIsaac et al CMAJ1998;158:75–83",
+            "file": "eight-diagnostic-primary-final26/mcisaac1998.pdf",
+            "readScope": "Original p5/printed79 score derivation and figure directly re-opened; local original page image visually read. Four findings/age weights and below0->0/highest4 confirmed. Not a full article, diagnostic-performance, treatment or instrument-rights approval."
+          },
+          {
+            "url": "https://stacks.cdc.gov/view/cdc/33542/cdc_33542_DS1.pdf",
+            "edition": "Fine et al Arch Intern Med2012;172(11):847–852 DOI10.1001/archinternmed.2012.950 author manuscript",
+            "readScope": "Direct original PDF text Methods p3/lines107–112 read via web; explicitly normalizes −1 to0 and5 to4. Screenshot attempt returned an error, so no visual-table reading of this source claimed. No full study or treatment approval."
+          }
+        ],
+        "author": {
+          "file": "mcisaac-final-normalization-authored-final27-v4.cjs",
+          "sha256": "07f44e77b61a7a982e85a897562fe50bf21bc67d9ebdd1f39299bcf8e9586209"
+        },
+        "previousFormula": "<p>1 ponto para cada: febre &gt; 38 °C, ausência de tosse, adenomegalia cervical anterior dolorosa, edema ou exsudato amigdaliano. Idade: +1 (3 a 14 anos), 0 (15 a 44 anos), −1 (≥ 45 anos). Total de −1 a 5.</p>",
+        "previousMethodVersion": "Centor 1981 modificado Mc Isaac 1998:4 critérios+idade, total−1 a 5",
+        "previousLimits": "O estudo McIsaac 1998 avaliou pessoas de 3–76 anos com sintomas respiratórios novos em medicina de família, comparando o escore com cultura de orofaringe. O total não estabelece certeza de estreptococo nem indicação automática de antibiótico. Pesos de idade, cortes e estratégia de teste devem seguir a tabela e a diretriz da versão utilizada.",
+        "previousFixtureCase2": [
+          "Criança de 8 anos com os 4 achados: 5 pontos",
+          {
+            "febre": true,
+            "tosse": true,
+            "linfo": true,
+            "amig": true,
+            "idade": "1"
+          },
+          {
+            "score": 5,
+            "level": "high",
+            "verdict": "51 a 53%"
+          }
+        ],
+        "previousFixtureSha256": "3c14b3f6c73f02f7c13014c11b87cec2a2827f59b147361f503738da1bbb8dfb",
+        "unchangedInputContract": {
+          "fields": [
+            {
+              "key": "febre",
+              "label": "Temperatura &gt; 38 °C",
+              "type": "chk",
+              "optional": false,
+              "options": null
+            },
+            {
+              "key": "tosse",
+              "label": "Ausência de tosse",
+              "type": "chk",
+              "optional": false,
+              "options": null
+            },
+            {
+              "key": "linfo",
+              "label": "Linfonodos cervicais anteriores aumentados e dolorosos",
+              "type": "chk",
+              "optional": false,
+              "options": null
+            },
+            {
+              "key": "amig",
+              "label": "Edema ou exsudato amigdaliano",
+              "type": "chk",
+              "optional": false,
+              "options": null
+            },
+            {
+              "key": "idade",
+              "label": "Idade",
+              "type": "radio",
+              "optional": false,
+              "options": {
+                "0": "15 a 44 anos",
+                "1": "3 a 14 anos",
+                "-1": "≥ 45 anos"
+              }
+            }
+          ],
+          "hash": "8d1957f2ea4d2876af42aecc990b5478238e24210fe7200f8022b05e1e25f3e1"
+        },
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "rightsApproval": "not-performed",
+        "fullMethodConformance": false,
+        "prospectiveImplementationEdition": {
+          "methodVersion": "McIsaac 1998 / Fine 2012: quatro achados de 1 ponto e ajuste etário; soma preliminar −1 a 5, pontuação final limitada a 0 a 4",
+          "primarySourceURL": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1228750/",
+          "scope": "Final source normalization0–4 with separately retained preliminary−1..5; probability and clinical management remain outside this technical approval."
+        }
+      },
+      "currentResultLabel": "Centor/McIsaac — pontuação final",
+      "previousImplementedVariant": "1 ponto para cada: febre > 38 °C, ausência de tosse, adenomegalia cervical anterior dolorosa, edema ou exsudato amigdaliano. Idade: +1 (3 a 14 anos), 0 (15 a 44 anos), −1 (≥ 45 anos). Total de −1 a 5.",
+      "previousImplementationHash": "838a5d17e2d0e7102608a4b63b164a6a666fa9a800d4e2dedd2d3c2cedf7cfae",
+      "previousInputContract": {
+        "fields": [
+          {
+            "key": "febre",
+            "label": "Temperatura &gt; 38 °C",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "tosse",
+            "label": "Ausência de tosse",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "linfo",
+            "label": "Linfonodos cervicais anteriores aumentados e dolorosos",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "amig",
+            "label": "Edema ou exsudato amigdaliano",
+            "type": "chk",
+            "optional": false,
+            "options": null
+          },
+          {
+            "key": "idade",
+            "label": "Idade",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "15 a 44 anos",
+              "1": "3 a 14 anos",
+              "-1": "≥ 45 anos"
+            }
+          }
+        ],
+        "hash": "8d1957f2ea4d2876af42aecc990b5478238e24210fe7200f8022b05e1e25f3e1"
+      }
+    },
+    "limits": "O estudo McIsaac 1998 avaliou pessoas de 3–76 anos com sintomas respiratórios novos em medicina de família, comparando o escore com cultura de orofaringe. O total não estabelece certeza de estreptococo nem indicação automática de antibiótico. Pesos de idade, cortes e estratégia de teste devem seguir a tabela e a diretriz da versão utilizada. A edição original de 1998 e o método descrito por Fine em 2012 definem a pontuação final entre 0 e 4. A soma preliminar de −1 a 5 é informação de cálculo separada e não deve ser tratada como a pontuação final dessas edições. A conferência abrange apenas os pesos e essa normalização; não aprova observação dos sinais, desempenho diagnóstico, probabilidades, teste ou tratamento.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:02.889Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "Resumo descreve faixa 0–4, enquanto versão local registra −1 a 5; necessidade de tabela integral para esclarecer variante. Diagnóstico, prescrição ou dispensa de teste não garantidos por total."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed"
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/centor-mcisaac/calculator.js",
+    "bytes": 5302,
+    "sha256": "5ebdcddfc2bb2cfc60dbc3ff8d25aeea587b964273fd0ab83c7e04a442a07481"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "4a844ecd57ca59e5753f38858e27802e8f4298a39e15d92675ad3094de75845f",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 4,
+      "sha256": "08d963d933c861edbb690ded0d4dd0a30992f7bdffb7cd89d66065db4616c330",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    },
+    {
+      "rows": 4,
+      "sha256": "08d963d933c861edbb690ded0d4dd0a30992f7bdffb7cd89d66065db4616c330",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

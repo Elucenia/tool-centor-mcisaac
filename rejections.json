@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean febre",
+    "input": {
+      "febre": "2",
+      "idade": "-1",
+      "tosse": false,
+      "linfo": false,
+      "amig": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "febre"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean tosse",
+    "input": {
+      "febre": true,
+      "idade": "-1",
+      "tosse": "2",
+      "linfo": false,
+      "amig": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "tosse"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean linfo",
+    "input": {
+      "febre": true,
+      "idade": "-1",
+      "tosse": false,
+      "linfo": "2",
+      "amig": false
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "linfo"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject invalid boolean amig",
+    "input": {
+      "febre": true,
+      "idade": "-1",
+      "tosse": false,
+      "linfo": false,
+      "amig": "2"
+    },
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": "amig"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field idade",
+    "input": {
+      "febre": true,
+      "tosse": false,
+      "linfo": false,
+      "amig": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "idade"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field idade",
+    "input": {
+      "febre": true,
+      "idade": "",
+      "tosse": false,
+      "linfo": false,
+      "amig": false
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "idade"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option idade",
+    "input": {
+      "febre": true,
+      "idade": "__ELUCENIA_INVALID_OPTION__",
+      "tosse": false,
+      "linfo": false,
+      "amig": false
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "idade"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]

@@ -1,42 +1,99 @@
 [
   {
-    "label": "Adulto de 50 anos com febre, com tosse: 0 ponto",
-    "input": {
+    "id": "centor-mcisaac",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "Adulto de 50 anos com febre, com tosse: 0 ponto",
+    "originalInput": {
       "febre": true,
       "idade": "-1"
+    },
+    "input": {
+      "febre": true,
+      "idade": "-1",
+      "tosse": false,
+      "linfo": false,
+      "amig": false
     },
     "expected": {
       "score": 0,
       "level": "low",
       "verdict": "1 a 2,5%"
     },
-    "originalInput": {
-      "febre": true,
-      "idade": "-1"
+    "recordedResult": {
+      "main": [
+        "0",
+        "pontos"
+      ],
+      "label": "Centor/McIsaac — pontuação final",
+      "raw": {
+        "score": 0,
+        "preliminaryScore": 0
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Adulto de 30 anos, febre e sem tosse: 2 pontos",
-    "input": {
+    "id": "centor-mcisaac",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "Adulto de 30 anos, febre e sem tosse: 2 pontos",
+    "originalInput": {
       "febre": true,
       "tosse": true,
       "idade": "0"
+    },
+    "input": {
+      "febre": true,
+      "tosse": true,
+      "idade": "0",
+      "linfo": false,
+      "amig": false
     },
     "expected": {
       "score": 2,
       "level": "mid",
       "verdict": "11 a 17%"
     },
+    "recordedResult": {
+      "main": [
+        "2",
+        "pontos"
+      ],
+      "label": "Centor/McIsaac — pontuação final",
+      "raw": {
+        "score": 2,
+        "preliminaryScore": 2
+      }
+    },
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "centor-mcisaac",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "Criança de 8 anos com os 4 achados: pontuação final 4 (soma preliminar 5)",
     "originalInput": {
       "febre": true,
       "tosse": true,
-      "idade": "0"
+      "linfo": true,
+      "amig": true,
+      "idade": "1"
     },
-    "expandedZeroOptions": []
-  },
-  {
-    "label": "Criança de 8 anos com os 4 achados: 5 pontos",
     "input": {
       "febre": true,
       "tosse": true,
@@ -45,21 +102,42 @@
       "idade": "1"
     },
     "expected": {
-      "score": 5,
+      "score": 4,
       "level": "high",
       "verdict": "51 a 53%"
     },
+    "recordedResult": {
+      "main": [
+        "4",
+        "pontos"
+      ],
+      "label": "Centor/McIsaac — pontuação final",
+      "raw": {
+        "score": 4,
+        "preliminaryScore": 5
+      }
+    },
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "centor-mcisaac",
+    "kind": "native-source-reference",
+    "index": 3,
+    "name": "Adulto de 60 anos com os 4 achados: 3 pontos",
     "originalInput": {
       "febre": true,
       "tosse": true,
       "linfo": true,
       "amig": true,
-      "idade": "1"
+      "idade": "-1"
     },
-    "expandedZeroOptions": []
-  },
-  {
-    "label": "Adulto de 60 anos com os 4 achados: 3 pontos",
     "input": {
       "febre": true,
       "tosse": true,
@@ -72,13 +150,24 @@
       "level": "mid",
       "verdict": "28 a 35%"
     },
-    "originalInput": {
-      "febre": true,
-      "tosse": true,
-      "linfo": true,
-      "amig": true,
-      "idade": "-1"
+    "recordedResult": {
+      "main": [
+        "3",
+        "pontos"
+      ],
+      "label": "Centor/McIsaac — pontuação final",
+      "raw": {
+        "score": 3,
+        "preliminaryScore": 3
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]
