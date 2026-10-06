@@ -79,3 +79,35 @@ Résultat de la formule ou de la classification. L’interprétation, la conduit
 Apache-2.0 s’applique uniquement au code d’ELUCENIA. Les droits sur les instruments, publications, traductions et données restent ceux de leurs titulaires respectifs. Conservez LICENSE et NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Résultats documentés
+
+Les informations ci-dessous conservent les sorties de la méthode pour des exemples synthétiques. Elles ne constituent pas une validation clinique indépendante.
+
+### 1
+
+Probabilité de streptocoque de 1 à 2,5 %
+
+Pas de test et pas d’antibiotique.
+
+
+### 2
+
+Probabilité de streptocoque de 11 à 17 %
+
+Test rapide ou culture ; antibiotique uniquement si positif.
+
+
+### 3
+
+Probabilité de streptocoque de 51 à 53 %
+
+Tester et traiter si positif ; en l’absence de test, envisager un antibiotique empirique.
+
+
+### 4
+
+Probabilité de streptocoque de 28 à 35 %
+
+Test rapide ou culture ; antibiotique uniquement si positif.
+

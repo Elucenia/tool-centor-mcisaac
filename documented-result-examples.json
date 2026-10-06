@@ -1,0 +1,707 @@
+{
+  "id": "centor-mcisaac",
+  "implementationVersion": "centor-mcisaac@native-2026-10-05+2711af642ef8",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "Adulto de 50 anos com febre, com tosse: 0 ponto",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probabilidade de estreptococo de 1 a 2,5%",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Sem teste e sem antibiótico.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Adulto de 30 anos, febre e sem tosse: 2 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probabilidade de estreptococo de 11 a 17%",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Teste rápido ou cultura; antibiótico só se positivo.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Criança de 8 anos com os 4 achados: pontuação final 4 (soma preliminar 5)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probabilidade de estreptococo de 51 a 53%",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Testar e tratar se positivo; na falta de teste, considerar antibiótico empírico.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Adulto de 60 anos com os 4 achados: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probabilidade de estreptococo de 28 a 35%",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Teste rápido ou cultura; antibiótico só se positivo.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "Adulto de 50 anos com febre, com tosse: 0 ponto",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probability of streptococcus from 1 to 2.5%",
+            "locale": "en",
+            "template": "documented-authored-1c0f26e9a43b171f8dbd"
+          },
+          "note": {
+            "text": "No test and no antibiotic.",
+            "locale": "en",
+            "template": "documented-authored-1d98368aa08acc69fc27"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Adulto de 30 anos, febre e sem tosse: 2 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probability of streptococcus from 11 to 17%",
+            "locale": "en",
+            "template": "documented-authored-cf8f0a7b81ecd2861728"
+          },
+          "note": {
+            "text": "Rapid test or culture; antibiotic only if positive.",
+            "locale": "en",
+            "template": "documented-authored-0131b6b186956aeff5ea"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Criança de 8 anos com os 4 achados: pontuação final 4 (soma preliminar 5)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probability of streptococcus from 51 to 53%",
+            "locale": "en",
+            "template": "documented-authored-4172170a42087a0cd50a"
+          },
+          "note": {
+            "text": "Test and treat if positive; if no test is available, consider empiric antibiotic.",
+            "locale": "en",
+            "template": "documented-authored-84b7777f8a3cdfec9282"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Adulto de 60 anos com os 4 achados: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probability of streptococcus from 28 to 35%",
+            "locale": "en",
+            "template": "documented-authored-895fc7ea15da9e756ae1"
+          },
+          "note": {
+            "text": "Rapid test or culture; antibiotic only if positive.",
+            "locale": "en",
+            "template": "documented-authored-0131b6b186956aeff5ea"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "Adulto de 50 anos com febre, com tosse: 0 ponto",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probabilidad de estreptococo de 1 a 2,5%",
+            "locale": "es",
+            "template": "documented-authored-1c0f26e9a43b171f8dbd"
+          },
+          "note": {
+            "text": "Sin prueba y sin antibiótico.",
+            "locale": "es",
+            "template": "documented-authored-1d98368aa08acc69fc27"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Adulto de 30 anos, febre e sem tosse: 2 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probabilidad de estreptococo de 11 a 17%",
+            "locale": "es",
+            "template": "documented-authored-cf8f0a7b81ecd2861728"
+          },
+          "note": {
+            "text": "Prueba rápida o cultivo; antibiótico solo si es positivo.",
+            "locale": "es",
+            "template": "documented-authored-0131b6b186956aeff5ea"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Criança de 8 anos com os 4 achados: pontuação final 4 (soma preliminar 5)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probabilidad de estreptococo de 51 a 53%",
+            "locale": "es",
+            "template": "documented-authored-4172170a42087a0cd50a"
+          },
+          "note": {
+            "text": "Hacer prueba y tratar si es positivo; si no hay prueba, considerar antibiótico empírico.",
+            "locale": "es",
+            "template": "documented-authored-84b7777f8a3cdfec9282"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Adulto de 60 anos com os 4 achados: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probabilidad de estreptococo de 28 a 35%",
+            "locale": "es",
+            "template": "documented-authored-895fc7ea15da9e756ae1"
+          },
+          "note": {
+            "text": "Prueba rápida o cultivo; antibiótico solo si es positivo.",
+            "locale": "es",
+            "template": "documented-authored-0131b6b186956aeff5ea"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "Adulto de 50 anos com febre, com tosse: 0 ponto",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probabilité de streptocoque de 1 à 2,5 %",
+            "locale": "fr",
+            "template": "documented-authored-1c0f26e9a43b171f8dbd"
+          },
+          "note": {
+            "text": "Pas de test et pas d’antibiotique.",
+            "locale": "fr",
+            "template": "documented-authored-1d98368aa08acc69fc27"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Adulto de 30 anos, febre e sem tosse: 2 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probabilité de streptocoque de 11 à 17 %",
+            "locale": "fr",
+            "template": "documented-authored-cf8f0a7b81ecd2861728"
+          },
+          "note": {
+            "text": "Test rapide ou culture ; antibiotique uniquement si positif.",
+            "locale": "fr",
+            "template": "documented-authored-0131b6b186956aeff5ea"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Criança de 8 anos com os 4 achados: pontuação final 4 (soma preliminar 5)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probabilité de streptocoque de 51 à 53 %",
+            "locale": "fr",
+            "template": "documented-authored-4172170a42087a0cd50a"
+          },
+          "note": {
+            "text": "Tester et traiter si positif ; en l’absence de test, envisager un antibiotique empirique.",
+            "locale": "fr",
+            "template": "documented-authored-84b7777f8a3cdfec9282"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Adulto de 60 anos com os 4 achados: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probabilité de streptocoque de 28 à 35 %",
+            "locale": "fr",
+            "template": "documented-authored-895fc7ea15da9e756ae1"
+          },
+          "note": {
+            "text": "Test rapide ou culture ; antibiotique uniquement si positif.",
+            "locale": "fr",
+            "template": "documented-authored-0131b6b186956aeff5ea"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "Adulto de 50 anos com febre, com tosse: 0 ponto",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Streptokokkenwahrscheinlichkeit von 1 bis 2,5 %",
+            "locale": "de",
+            "template": "documented-authored-1c0f26e9a43b171f8dbd"
+          },
+          "note": {
+            "text": "Kein Test und kein Antibiotikum.",
+            "locale": "de",
+            "template": "documented-authored-1d98368aa08acc69fc27"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Adulto de 30 anos, febre e sem tosse: 2 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Streptokokkenwahrscheinlichkeit von 11 bis 17 %",
+            "locale": "de",
+            "template": "documented-authored-cf8f0a7b81ecd2861728"
+          },
+          "note": {
+            "text": "Schnelltest oder Kultur; Antibiotikum nur bei positivem Ergebnis.",
+            "locale": "de",
+            "template": "documented-authored-0131b6b186956aeff5ea"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Criança de 8 anos com os 4 achados: pontuação final 4 (soma preliminar 5)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Streptokokkenwahrscheinlichkeit von 51 bis 53 %",
+            "locale": "de",
+            "template": "documented-authored-4172170a42087a0cd50a"
+          },
+          "note": {
+            "text": "Testen und bei positivem Ergebnis behandeln; wenn kein Test verfügbar ist, ein empirisches Antibiotikum erwägen.",
+            "locale": "de",
+            "template": "documented-authored-84b7777f8a3cdfec9282"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Adulto de 60 anos com os 4 achados: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Streptokokkenwahrscheinlichkeit von 28 bis 35 %",
+            "locale": "de",
+            "template": "documented-authored-895fc7ea15da9e756ae1"
+          },
+          "note": {
+            "text": "Schnelltest oder Kultur; Antibiotikum nur bei positivem Ergebnis.",
+            "locale": "de",
+            "template": "documented-authored-0131b6b186956aeff5ea"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "Adulto de 50 anos com febre, com tosse: 0 ponto",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probabilità di streptococco da 1 a 2,5%",
+            "locale": "it",
+            "template": "documented-authored-1c0f26e9a43b171f8dbd"
+          },
+          "note": {
+            "text": "Nessun test e nessun antibiotico.",
+            "locale": "it",
+            "template": "documented-authored-1d98368aa08acc69fc27"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Adulto de 30 anos, febre e sem tosse: 2 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probabilità di streptococco da 11 a 17%",
+            "locale": "it",
+            "template": "documented-authored-cf8f0a7b81ecd2861728"
+          },
+          "note": {
+            "text": "Test rapido o coltura; antibiotico solo se positivo.",
+            "locale": "it",
+            "template": "documented-authored-0131b6b186956aeff5ea"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Criança de 8 anos com os 4 achados: pontuação final 4 (soma preliminar 5)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probabilità di streptococco da 51 a 53%",
+            "locale": "it",
+            "template": "documented-authored-4172170a42087a0cd50a"
+          },
+          "note": {
+            "text": "Eseguire il test e trattare se positivo; in assenza di test, considerare antibiotico empirico.",
+            "locale": "it",
+            "template": "documented-authored-84b7777f8a3cdfec9282"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Adulto de 60 anos com os 4 achados: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Probabilità di streptococco da 28 a 35%",
+            "locale": "it",
+            "template": "documented-authored-895fc7ea15da9e756ae1"
+          },
+          "note": {
+            "text": "Test rapido o coltura; antibiotico solo se positivo.",
+            "locale": "it",
+            "template": "documented-authored-0131b6b186956aeff5ea"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "Adulto de 50 anos com febre, com tosse: 0 ponto",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "احتمال العقديات من 1 إلى 2,5%",
+            "locale": "ar",
+            "template": "documented-authored-1c0f26e9a43b171f8dbd"
+          },
+          "note": {
+            "text": "لا اختبار ولا مضاد حيوي.",
+            "locale": "ar",
+            "template": "documented-authored-1d98368aa08acc69fc27"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Adulto de 30 anos, febre e sem tosse: 2 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "احتمال العقديات من 11 إلى 17%",
+            "locale": "ar",
+            "template": "documented-authored-cf8f0a7b81ecd2861728"
+          },
+          "note": {
+            "text": "اختبار سريع أو زرع؛ مضاد حيوي فقط إذا كانت النتيجة إيجابية.",
+            "locale": "ar",
+            "template": "documented-authored-0131b6b186956aeff5ea"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Criança de 8 anos com os 4 achados: pontuação final 4 (soma preliminar 5)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "احتمال العقديات من 51 إلى 53%",
+            "locale": "ar",
+            "template": "documented-authored-4172170a42087a0cd50a"
+          },
+          "note": {
+            "text": "اختبر وعالِج إذا كانت النتيجة إيجابية؛ وعند عدم توفر اختبار، فكر في مضاد حيوي تجريبي.",
+            "locale": "ar",
+            "template": "documented-authored-84b7777f8a3cdfec9282"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Adulto de 60 anos com os 4 achados: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "احتمال العقديات من 28 إلى 35%",
+            "locale": "ar",
+            "template": "documented-authored-895fc7ea15da9e756ae1"
+          },
+          "note": {
+            "text": "اختبار سريع أو زرع؛ مضاد حيوي فقط إذا كانت النتيجة إيجابية.",
+            "locale": "ar",
+            "template": "documented-authored-0131b6b186956aeff5ea"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "Adulto de 50 anos com febre, com tosse: 0 ponto",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "链球菌概率为 1 至 2.5%",
+            "locale": "zh",
+            "template": "documented-authored-1c0f26e9a43b171f8dbd"
+          },
+          "note": {
+            "text": "不检测且不使用抗生素。",
+            "locale": "zh",
+            "template": "documented-authored-1d98368aa08acc69fc27"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Adulto de 30 anos, febre e sem tosse: 2 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "链球菌概率为 11 至 17%",
+            "locale": "zh",
+            "template": "documented-authored-cf8f0a7b81ecd2861728"
+          },
+          "note": {
+            "text": "快速检测或培养；仅在阳性时使用抗生素。",
+            "locale": "zh",
+            "template": "documented-authored-0131b6b186956aeff5ea"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Criança de 8 anos com os 4 achados: pontuação final 4 (soma preliminar 5)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "链球菌概率为 51 至 53%",
+            "locale": "zh",
+            "template": "documented-authored-4172170a42087a0cd50a"
+          },
+          "note": {
+            "text": "如阳性则检测并治疗；若无检测条件，可考虑经验性使用抗生素。",
+            "locale": "zh",
+            "template": "documented-authored-84b7777f8a3cdfec9282"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Adulto de 60 anos com os 4 achados: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "链球菌概率为 28 至 35%",
+            "locale": "zh",
+            "template": "documented-authored-895fc7ea15da9e756ae1"
+          },
+          "note": {
+            "text": "快速检测或培养；仅在阳性时使用抗生素。",
+            "locale": "zh",
+            "template": "documented-authored-0131b6b186956aeff5ea"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "Adulto de 50 anos com febre, com tosse: 0 ponto",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "連鎖球菌の確率は 1～2.5%",
+            "locale": "ja",
+            "template": "documented-authored-1c0f26e9a43b171f8dbd"
+          },
+          "note": {
+            "text": "検査なし、抗生物質なし。",
+            "locale": "ja",
+            "template": "documented-authored-1d98368aa08acc69fc27"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Adulto de 30 anos, febre e sem tosse: 2 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "連鎖球菌の確率は 11～17%",
+            "locale": "ja",
+            "template": "documented-authored-cf8f0a7b81ecd2861728"
+          },
+          "note": {
+            "text": "迅速検査または培養；抗菌薬は陽性時のみ。",
+            "locale": "ja",
+            "template": "documented-authored-0131b6b186956aeff5ea"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Criança de 8 anos com os 4 achados: pontuação final 4 (soma preliminar 5)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "連鎖球菌の確率は 51～53%",
+            "locale": "ja",
+            "template": "documented-authored-4172170a42087a0cd50a"
+          },
+          "note": {
+            "text": "検査して陽性なら治療する；検査がない場合は経験的抗菌薬を考慮する。",
+            "locale": "ja",
+            "template": "documented-authored-84b7777f8a3cdfec9282"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Adulto de 60 anos com os 4 achados: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "連鎖球菌の確率は 28～35%",
+            "locale": "ja",
+            "template": "documented-authored-895fc7ea15da9e756ae1"
+          },
+          "note": {
+            "text": "迅速検査または培養；抗菌薬は陽性時のみ。",
+            "locale": "ja",
+            "template": "documented-authored-0131b6b186956aeff5ea"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "Adulto de 50 anos com febre, com tosse: 0 ponto",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "स्ट्रेप्टोकोकस की संभावना 1 से 2.5%",
+            "locale": "hi",
+            "template": "documented-authored-1c0f26e9a43b171f8dbd"
+          },
+          "note": {
+            "text": "न परीक्षण और न एंटीबायोटिक.",
+            "locale": "hi",
+            "template": "documented-authored-1d98368aa08acc69fc27"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Adulto de 30 anos, febre e sem tosse: 2 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "स्ट्रेप्टोकोकस की संभावना 11 से 17%",
+            "locale": "hi",
+            "template": "documented-authored-cf8f0a7b81ecd2861728"
+          },
+          "note": {
+            "text": "रैपिड टेस्ट या कल्चर; एंटीबायोटिक केवल सकारात्मक होने पर.",
+            "locale": "hi",
+            "template": "documented-authored-0131b6b186956aeff5ea"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Criança de 8 anos com os 4 achados: pontuação final 4 (soma preliminar 5)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "स्ट्रेप्टोकोकस की संभावना 51 से 53%",
+            "locale": "hi",
+            "template": "documented-authored-4172170a42087a0cd50a"
+          },
+          "note": {
+            "text": "परीक्षण करें और सकारात्मक होने पर उपचार करें; परीक्षण उपलब्ध न हो तो अनुभवजन्य एंटीबायोटिक पर विचार करें.",
+            "locale": "hi",
+            "template": "documented-authored-84b7777f8a3cdfec9282"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Adulto de 60 anos com os 4 achados: 3 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "स्ट्रेप्टोकोकस की संभावना 28 से 35%",
+            "locale": "hi",
+            "template": "documented-authored-895fc7ea15da9e756ae1"
+          },
+          "note": {
+            "text": "रैपिड टेस्ट या कल्चर; एंटीबायोटिक केवल सकारात्मक होने पर.",
+            "locale": "hi",
+            "template": "documented-authored-0131b6b186956aeff5ea"
+          },
+          "level": "mid"
+        }
+      }
+    ]
+  }
+}

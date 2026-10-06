@@ -1,0 +1,240 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "centor-mcisaac",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "1aefabfb86676c9d6ace74105d58786324523631",
+    "oldEngineSha256": "5ebdcddfc2bb2cfc60dbc3ff8d25aeea587b964273fd0ab83c7e04a442a07481",
+    "currentEngineSha256": "2711af642ef8c3a9c598d7326aaa639dd2d74738357ae45c23d079a7982420f1"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "Adulto de 50 anos com febre, com tosse: 0 ponto",
+      "input": {
+        "febre": true,
+        "idade": "-1",
+        "tosse": false,
+        "linfo": false,
+        "amig": false
+      },
+      "publicOutput": {
+        "id": "centor-mcisaac",
+        "main": [
+          "0",
+          "pontos"
+        ],
+        "label": "Centor/McIsaac — pontuação final",
+        "raw": {
+          "score": 0,
+          "preliminaryScore": 0
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 0,
+        "level": "low",
+        "verdict": "1 a 2,5%"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "0",
+          "pontos"
+        ],
+        "label": "Centor/McIsaac — pontuação final",
+        "level": "low",
+        "verdict": "Probabilidade de estreptococo de 1 a 2,5%",
+        "note": "Sem teste e sem antibiótico.",
+        "raw": {
+          "score": 0,
+          "preliminaryScore": 0
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "Adulto de 30 anos, febre e sem tosse: 2 pontos",
+      "input": {
+        "febre": true,
+        "tosse": true,
+        "idade": "0",
+        "linfo": false,
+        "amig": false
+      },
+      "publicOutput": {
+        "id": "centor-mcisaac",
+        "main": [
+          "2",
+          "pontos"
+        ],
+        "label": "Centor/McIsaac — pontuação final",
+        "raw": {
+          "score": 2,
+          "preliminaryScore": 2
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 2,
+        "level": "mid",
+        "verdict": "11 a 17%"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "2",
+          "pontos"
+        ],
+        "label": "Centor/McIsaac — pontuação final",
+        "level": "mid",
+        "verdict": "Probabilidade de estreptococo de 11 a 17%",
+        "note": "Teste rápido ou cultura; antibiótico só se positivo.",
+        "raw": {
+          "score": 2,
+          "preliminaryScore": 2
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "Criança de 8 anos com os 4 achados: pontuação final 4 (soma preliminar 5)",
+      "input": {
+        "febre": true,
+        "tosse": true,
+        "linfo": true,
+        "amig": true,
+        "idade": "1"
+      },
+      "publicOutput": {
+        "id": "centor-mcisaac",
+        "main": [
+          "4",
+          "pontos"
+        ],
+        "label": "Centor/McIsaac — pontuação final",
+        "raw": {
+          "score": 4,
+          "preliminaryScore": 5
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 4,
+        "level": "high",
+        "verdict": "51 a 53%"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "4",
+          "pontos"
+        ],
+        "label": "Centor/McIsaac — pontuação final",
+        "level": "high",
+        "verdict": "Probabilidade de estreptococo de 51 a 53%",
+        "note": "Testar e tratar se positivo; na falta de teste, considerar antibiótico empírico.",
+        "raw": {
+          "score": 4,
+          "preliminaryScore": 5
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 3,
+      "name": "Adulto de 60 anos com os 4 achados: 3 pontos",
+      "input": {
+        "febre": true,
+        "tosse": true,
+        "linfo": true,
+        "amig": true,
+        "idade": "-1"
+      },
+      "publicOutput": {
+        "id": "centor-mcisaac",
+        "main": [
+          "3",
+          "pontos"
+        ],
+        "label": "Centor/McIsaac — pontuação final",
+        "raw": {
+          "score": 3,
+          "preliminaryScore": 3
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 3,
+        "level": "mid",
+        "verdict": "28 a 35%"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "3",
+          "pontos"
+        ],
+        "label": "Centor/McIsaac — pontuação final",
+        "level": "mid",
+        "verdict": "Probabilidade de estreptococo de 28 a 35%",
+        "note": "Teste rápido ou cultura; antibiótico só se positivo.",
+        "raw": {
+          "score": 3,
+          "preliminaryScore": 3
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    }
+  ]
+}

@@ -285,7 +285,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "McIsaac 1998 / Fine 2012: quatro achados de 1 ponto e ajuste etário; soma preliminar −1 a 5, pontuação final limitada a 0 a 4",
-    "implementationVersion": "centor-mcisaac@native-2026-10-04+5ebdcddfc2bb",
+    "implementationVersion": "centor-mcisaac@native-2026-10-05+2711af642ef8",
     "currentMethodSource": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1228750/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -561,7 +561,7 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "5ebdcddfc2bb2cfc60dbc3ff8d25aeea587b964273fd0ab83c7e04a442a07481",
+      "implementationHash": "2711af642ef8c3a9c598d7326aaa639dd2d74738357ae45c23d079a7982420f1",
       "mcisaacNormalizationSourceAmendment": {
         "at": "2026-10-04T19:31:48.038Z",
         "scope": "Source-edition final-score normalization only: preliminary sum −1..5 is recorded separately; final score is0..4 in1998 and2012. Four findings/age weights unchanged. Display formula, edition, appended limits and one historical caption/expected numeric score are explicitly amended. No clinical/probability/treatment certification.",
@@ -701,7 +701,35 @@
           }
         ],
         "hash": "8d1957f2ea4d2876af42aecc990b5478238e24210fe7200f8022b05e1e25f3e1"
-      }
+      },
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "centor-mcisaac@native-2026-10-04+5ebdcddfc2bb",
+          "previousImplementationHash": "5ebdcddfc2bb2cfc60dbc3ff8d25aeea587b964273fd0ab83c7e04a442a07481",
+          "implementationHash": "2711af642ef8c3a9c598d7326aaa639dd2d74738357ae45c23d079a7982420f1",
+          "scientificBodySha256": "d9d0b2023afd60d7d4bda7cc89747f1e28fb701628159b4e782b79151483f1d5",
+          "metadataContractHash": "59a114ba4a23f241b050bbabce62bf011cf6db081a23f977ced8ce6220b02cb3",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "O estudo McIsaac 1998 avaliou pessoas de 3–76 anos com sintomas respiratórios novos em medicina de família, comparando o escore com cultura de orofaringe. O total não estabelece certeza de estreptococo nem indicação automática de antibiótico. Pesos de idade, cortes e estratégia de teste devem seguir a tabela e a diretriz da versão utilizada. A edição original de 1998 e o método descrito por Fine em 2012 definem a pontuação final entre 0 e 4. A soma preliminar de −1 a 5 é informação de cálculo separada e não deve ser tratada como a pontuação final dessas edições. A conferência abrange apenas os pesos e essa normalização; não aprova observação dos sinais, desempenho diagnóstico, probabilidades, teste ou tratamento.",
     "sourceLimitEvidence": {
@@ -720,20 +748,20 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/centor-mcisaac/calculator.js",
-    "bytes": 5302,
-    "sha256": "5ebdcddfc2bb2cfc60dbc3ff8d25aeea587b964273fd0ab83c7e04a442a07481"
+    "bytes": 5507,
+    "sha256": "2711af642ef8c3a9c598d7326aaa639dd2d74738357ae45c23d079a7982420f1"
   },
-  "sourceToolSha256": "4a844ecd57ca59e5753f38858e27802e8f4298a39e15d92675ad3094de75845f",
+  "sourceToolSha256": "8f4175611bc1e120531f53e26082f73598549bd275f056532ce8a99c80a9cfa7",
   "omittedFullReferenceBanks": [
     {
       "rows": 4,
       "sha256": "08d963d933c861edbb690ded0d4dd0a30992f7bdffb7cd89d66065db4616c330",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     },
     {
       "rows": 4,
       "sha256": "08d963d933c861edbb690ded0d4dd0a30992f7bdffb7cd89d66065db4616c330",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

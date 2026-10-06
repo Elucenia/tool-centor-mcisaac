@@ -79,3 +79,35 @@ Resultado de la fórmula o clasificación. La interpretación, la conducta y la 
 Apache-2.0 se aplica únicamente al código de ELUCENIA. Los derechos de los instrumentos, publicaciones, traducciones y datos permanecen en manos de sus respectivos titulares. Conserve LICENSE y NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Resultados documentados
+
+La información siguiente conserva las salidas del método para ejemplos sintéticos. No constituye una validación clínica independiente.
+
+### 1
+
+Probabilidad de estreptococo de 1 a 2,5%
+
+Sin prueba y sin antibiótico.
+
+
+### 2
+
+Probabilidad de estreptococo de 11 a 17%
+
+Prueba rápida o cultivo; antibiótico solo si es positivo.
+
+
+### 3
+
+Probabilidad de estreptococo de 51 a 53%
+
+Hacer prueba y tratar si es positivo; si no hay prueba, considerar antibiótico empírico.
+
+
+### 4
+
+Probabilidad de estreptococo de 28 a 35%
+
+Prueba rápida o cultivo; antibiótico solo si es positivo.
+

@@ -79,3 +79,35 @@ Risultato della formula o classificazione. Interpretazione, condotta e applicabi
 Apache-2.0 si applica solo al codice di ELUCENIA. I diritti su strumenti, pubblicazioni, traduzioni e dati restano ai rispettivi titolari. Conservi LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Risultati documentati
+
+Le informazioni seguenti conservano gli output del metodo per esempi sintetici. Non costituiscono una validazione clinica indipendente.
+
+### 1
+
+Probabilità di streptococco da 1 a 2,5%
+
+Nessun test e nessun antibiotico.
+
+
+### 2
+
+Probabilità di streptococco da 11 a 17%
+
+Test rapido o coltura; antibiotico solo se positivo.
+
+
+### 3
+
+Probabilità di streptococco da 51 a 53%
+
+Eseguire il test e trattare se positivo; in assenza di test, considerare antibiotico empirico.
+
+
+### 4
+
+Probabilità di streptococco da 28 a 35%
+
+Test rapido o coltura; antibiotico solo se positivo.
+
